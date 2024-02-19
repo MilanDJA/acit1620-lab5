@@ -45,7 +45,6 @@
 
 */
 
-/* Header */
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -128,38 +127,37 @@ header > div > div {
   grid-row: 3 / span 3;
 }
 
-/* Footer */
 footer div {
   display: flex;
-  flex-direction: row; /* Ensure items are laid out in a row */
-  align-items: center; /* Center items vertically */
+  flex-direction: row; 
+  align-items: center; 
 }
 
 footer p {
-  margin-top: 0; /* Remove top margin */
-  margin-right: auto; /* Push the text to the left */
+  margin-top: 0; 
+  margin-right: auto; 
 }
 
 footer img {
-  max-width: 100%; /* Ensure the image does not exceed container width */
-  margin-left: auto; /* Align the image to the right */
+  max-width: 100%; 
+  margin-left: auto; 
 }
 
 @media (max-width: 700px) {
   footer div {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 0; /* Remove padding */
+    flex-direction: column;
+    align-items: center; 
+    padding: 0; 
   }
 
   footer p {
-    margin-right: 0; /* Remove right margin */
-    margin-top: 1em; /* Add top margin to separate from the image */
-    margin-left: 0; /* Reset margin left for smaller screens */
+    margin-right: 0; 
+    margin-top: 1em;
+    margin-left: 0; 
   }
 
   footer img {
-    order: -1; /* Move the image above the text */
-    margin: 0; /* Reset margin */
+    order: -1; 
+    margin: 0; 
   }
 }
