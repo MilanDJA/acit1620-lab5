@@ -44,3 +44,122 @@
         On screens wider than 800px, the <p> element inside the div must additionally have no top margin
 
 */
+
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header > div {
+  display: grid;
+  grid-template-rows: max-content max-content;
+}
+
+header > div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+#flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#flexbox #canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  #flexbox h2 {
+    font-size: 6em;
+  }
+}
+
+#grid {
+  display: grid;
+  grid-template-rows: auto; 
+  grid-template-columns: 1fr; 
+  gap: 0; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(5, 250px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; 
+}
+
+.grid-container > * {
+  padding: 1em;
+}
+
+#grid h2 {
+  grid-column: span 3;
+  text-align: right;
+}
+
+#grid #p1 {
+  grid-column: span 2;
+  grid-row: 2;
+}
+
+#grid #p2 {
+  grid-row: 2;
+}
+
+#grid #p3 {
+  grid-row: 3;
+}
+
+#grid #p4 {
+  grid-row: 4;
+}
+
+#grid #p5 {
+  grid-row: 5;
+}
+
+#grid > div {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 3;
+}
+
+/* Footer */
+footer div {
+  display: flex;
+  flex-direction: row; /* Ensure items are laid out in a row */
+  align-items: center; /* Center items vertically */
+}
+
+footer p {
+  margin-top: 0; /* Remove top margin */
+  margin-right: auto; /* Push the text to the left */
+}
+
+footer img {
+  max-width: 100%; /* Ensure the image does not exceed container width */
+  margin-left: auto; /* Align the image to the right */
+}
+
+@media (max-width: 700px) {
+  footer div {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0; /* Remove padding */
+  }
+
+  footer p {
+    margin-right: 0; /* Remove right margin */
+    margin-top: 1em; /* Add top margin to separate from the image */
+    margin-left: 0; /* Reset margin left for smaller screens */
+  }
+
+  footer img {
+    order: -1; /* Move the image above the text */
+    margin: 0; /* Reset margin */
+  }
+}
